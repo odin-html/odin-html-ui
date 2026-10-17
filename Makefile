@@ -22,7 +22,7 @@ COLL := -collection:html=$(ODIN_HTML_ROOT)/odin-html-builder -collection:ui=.
 # no tests and is vetted all the same.
 PKGS := $(patsubst %/,%,$(sort $(dir $(wildcard ui/*/*.odin))))
 
-# The web half: the `v-*` custom elements, their contract manifests and the
+# The web half: the `oh-*` custom elements, their contract manifests and the
 # stylesheet, built by Vite through Bun.
 WEB := web
 
