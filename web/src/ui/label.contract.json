@@ -1,0 +1,12 @@
+{
+  "element": "oh-label",
+  "display": "contents",
+  "selectors": {
+    "label": "[data-oh-label-disabled-style]"
+  },
+  "attributes": {
+    "for": "for",
+    "disabledStyle": "data-oh-label-disabled-style"
+  },
+  "observed": ["disabled"]
+}

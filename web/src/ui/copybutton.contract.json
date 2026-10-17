@@ -1,0 +1,12 @@
+{
+  "element": "oh-copybutton",
+  "display": "contents",
+  "selectors": {
+    "root": "[data-oh-copybutton=\"root\"]",
+    "iconClipboard": "[data-oh-copybutton=\"clipboard\"]",
+    "iconCheck": "[data-oh-copybutton=\"check\"]"
+  },
+  "attributes": {
+    "target": "data-oh-copybutton-target"
+  }
+}

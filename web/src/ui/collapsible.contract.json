@@ -1,0 +1,19 @@
+{
+  "element": "oh-collapsible",
+  "display": "contents",
+  "selectors": {
+    "root": "[data-oh-collapsible=\"root\"]",
+    "trigger": "[data-oh-collapsible=\"trigger\"]",
+    "content": "[data-oh-collapsible=\"content\"]"
+  },
+  "attributes": {
+    "state": "data-oh-collapsible-state"
+  },
+  "states": {
+    "open": "open",
+    "closed": "closed"
+  },
+  "classes": {
+    "open": "oh-collapsible-open"
+  }
+}

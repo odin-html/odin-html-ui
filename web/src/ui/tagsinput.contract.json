@@ -1,0 +1,20 @@
+{
+  "element": "oh-tagsinput",
+  "display": "contents",
+  "selectors": {
+    "root": "[data-oh-tagsinput]",
+    "chips": "[data-oh-tagsinput-chips]",
+    "chip": "[data-oh-tagsinput-chip]",
+    "remove": "[data-oh-tagsinput-remove]",
+    "hiddenInputs": "[data-oh-tagsinput-hidden-inputs]",
+    "textInput": "[data-oh-tagsinput-text-input]",
+    "suggestion": "[data-oh-tagsinput-suggestion]"
+  },
+  "attributes": {
+    "name": "data-oh-tagsinput-name",
+    "suggestionsId": "data-oh-tagsinput-suggestions-id",
+    "suggestionValue": "data-oh-tagsinput-suggestion-value",
+    "chip": "data-oh-tagsinput-chip",
+    "remove": "data-oh-tagsinput-remove"
+  }
+}

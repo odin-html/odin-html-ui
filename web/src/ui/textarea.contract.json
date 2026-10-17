@@ -1,0 +1,11 @@
+{
+  "element": "oh-textarea",
+  "display": "contents",
+  "selectors": {
+    "field": "[data-oh-textarea]"
+  },
+  "attributes": {
+    "autoResize": "data-oh-textarea-auto-resize"
+  },
+  "enabled": "true"
+}

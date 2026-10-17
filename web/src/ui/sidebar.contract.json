@@ -1,0 +1,25 @@
+{
+  "element": "oh-sidebar",
+  "display": "contents",
+  "selectors": {
+    "wrapper": "[data-oh-sidebar-wrapper]",
+    "content": "[data-oh-sidebar-content]",
+    "trigger": "[data-oh-sidebar-trigger]",
+    "desktopContainer": "[data-sidebar=\"sidebar\"] > div"
+  },
+  "attributes": {
+    "id": "data-oh-sidebar-id",
+    "state": "data-oh-sidebar-state",
+    "collapsible": "data-oh-sidebar-collapsible",
+    "shortcut": "data-oh-sidebar-keyboard-shortcut",
+    "target": "data-oh-sidebar-target",
+    "portal": "data-oh-sidebar-mobile-portal",
+    "content": "data-oh-sidebar-content"
+  },
+  "states": {
+    "expanded": "expanded",
+    "collapsed": "collapsed"
+  },
+  "collapsibleOff": "none",
+  "mobileQuery": "(max-width: 767px)"
+}

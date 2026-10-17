@@ -1,0 +1,122 @@
+# `make check` vets every package, `make test` runs every component's tests,
+# and `make web` typechecks and builds the client half, so this workflow's only
+# real jobs are arranging the checkout the way the Makefile's collections
+# expect and installing the two toolchains.
+#
+# Two checkouts, not one, for the Odin job. This repository reaches the builder
+# through -collection:html=../odin-html-builder, relative to this repository,
+# so both go into sibling directories under the workspace rather than the
+# default layout -- the same arrangement the odin-rdf family's repositories
+# with a sibling dependency use. This repository is its own `ui:` collection
+# (-collection:ui=.), so it needs nothing else.
+name: CI
+
+# Documentation-only commits do not run this workflow.
+#
+# **A denylist, not an allowlist, and the asymmetry is the argument.** An
+# allowlist (`paths: [ui/**, web/**, ...]`) fails toward *no CI*: add a source
+# directory the list does not name and it is silently unverified. A denylist
+# fails the other way -- a pointless run until the list catches up. Wasteful,
+# visible, harmless.
+#
+# `web/src/ui/README.md` is the authoring checklist, prose that nothing
+# compiles. `.github/**` is deliberately absent: a change to CI must run CI.
+# `workflow_dispatch` carries no filter, so any commit can be run by hand.
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '.metis/**'
+      - 'README.md'
+      - 'LICENSE'
+      - 'web/src/ui/README.md'
+  pull_request:
+    paths-ignore:
+      - '.metis/**'
+      - 'README.md'
+      - 'LICENSE'
+      - 'web/src/ui/README.md'
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  odin:
+    strategy:
+      # One platform failing should not hide the other's results.
+      fail-fast: false
+      matrix:
+        # Two runners, the family's pair. Nothing here touches the platform --
+        # the components write markup to an `io.Writer` and the tests render
+        # to a string -- so the matrix proves the packages compile and pass
+        # the same on Linux, where an application serving them is deployed,
+        # and on darwin, where it is developed.
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          path: odin-html-ui
+
+      # **odin-html-builder tracks `main` until it has a tag.** The family's
+      # rule is a released tag rather than `main`, so that an upstream commit
+      # cannot turn this repository's CI red without a deliberate bump here: a
+      # red build then means this repository broke, which is the only way to
+      # tell a local regression from an upstream one. The builder has no
+      # release yet, so there is nothing to pin; when it tags its first, this
+      # ref becomes that tag, and every bump after it changes the ref, runs
+      # `make check` and `make test` locally against the new checkout, and is
+      # committed together with whatever it needed here.
+      - uses: actions/checkout@v5
+        with:
+          repository: odin-html/odin-html-builder
+          ref: main
+          path: odin-html-builder
+
+      - uses: laytan/setup-odin@v2
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          release: latest
+
+      - name: Odin version
+        run: odin version
+
+      - name: Vet every package
+        working-directory: odin-html-ui
+        run: make check
+
+      # The contract tests read web/src/ui/*.contract.json from the source
+      # tree by `#directory`, so this job needs no JavaScript toolchain: the
+      # manifests are checked in, and nothing built is read.
+      - name: Test
+        working-directory: odin-html-ui
+        run: make test
+
+  web:
+    # One runner: the build is TypeScript and CSS, and Bun and Vite produce the
+    # same bundle on every platform. What this job proves is that the custom
+    # elements typecheck against their manifests and that the stylesheet and
+    # bundle build -- the Odin job proves the other half of each contract.
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+
+      # Pinned to the version bun.lock was written with, so that `bun install
+      # --frozen-lockfile` reads the lockfile it was given rather than failing
+      # on a format a newer Bun would rewrite. Bump it with the lockfile.
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.3
+
+      - name: Bun version
+        run: bun --version
+
+      - name: Install
+        run: make web-install
+
+      - name: Typecheck and build
+        run: make web

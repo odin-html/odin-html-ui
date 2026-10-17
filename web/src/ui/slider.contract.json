@@ -1,0 +1,20 @@
+{
+  "element": "oh-slider",
+  "display": "contents",
+  "selectors": {
+    "root": "[data-oh-slider=\"root\"]",
+    "track": "[data-oh-slider=\"track\"]",
+    "fill": "[data-oh-slider=\"fill\"]",
+    "thumb": "[data-oh-slider=\"thumb\"]",
+    "input": "[data-oh-slider=\"input\"]"
+  },
+  "attributes": {
+    "min": "data-oh-slider-min",
+    "max": "data-oh-slider-max",
+    "step": "data-oh-slider-step",
+    "valueNow": "aria-valuenow",
+    "disabled": "aria-disabled",
+    "valueFor": "data-oh-slider-value-for"
+  },
+  "disabledValue": "true"
+}

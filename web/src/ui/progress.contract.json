@@ -1,0 +1,9 @@
+{
+  "element": "oh-progress",
+  "display": "block",
+  "selectors": {
+    "bar": "[role=\"progressbar\"]",
+    "indicator": "[data-oh-indicator]"
+  },
+  "observed": ["aria-valuenow", "aria-valuemax"]
+}

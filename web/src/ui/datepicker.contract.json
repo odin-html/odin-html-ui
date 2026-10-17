@@ -1,0 +1,18 @@
+{
+  "element": "oh-datepicker",
+  "display": "contents",
+  "selectors": {
+    "trigger": "[data-oh-datepicker-trigger]",
+    "display": "[data-oh-datepicker-display]",
+    "hiddenInput": "[data-oh-datepicker-hidden-input]",
+    "hiddenEndInput": "[data-oh-datepicker-hidden-end-input]",
+    "popoverContent": "[popover]"
+  },
+  "attributes": {
+    "displayFormat": "data-oh-datepicker-display-format",
+    "localeTag": "data-oh-datepicker-locale-tag",
+    "placeholder": "data-oh-datepicker-placeholder",
+    "mode": "data-oh-datepicker-mode",
+    "endPlaceholder": "data-oh-datepicker-end-placeholder"
+  }
+}

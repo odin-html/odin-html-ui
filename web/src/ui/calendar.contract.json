@@ -1,0 +1,26 @@
+{
+  "element": "oh-calendar",
+  "display": "contents",
+  "selectors": {
+    "container": "[data-oh-calendar-container]",
+    "weekdays": "[data-oh-calendar-weekdays]",
+    "days": "[data-oh-calendar-days]",
+    "prev": "[data-oh-calendar-prev]",
+    "next": "[data-oh-calendar-next]",
+    "monthSelect": "[data-oh-calendar-month-select]",
+    "yearSelect": "[data-oh-calendar-year-select]",
+    "monthValue": "[data-oh-calendar-month-value]",
+    "yearValue": "[data-oh-calendar-year-value]",
+    "hiddenInput": "[data-oh-calendar-hidden-input]",
+    "hiddenEndInput": "[data-oh-calendar-hidden-end-input]"
+  },
+  "attributes": {
+    "mode": "data-oh-calendar-mode",
+    "localeTag": "data-oh-calendar-locale-tag",
+    "initialMonth": "data-oh-calendar-initial-month",
+    "initialYear": "data-oh-calendar-initial-year",
+    "selectedDate": "data-oh-calendar-selected-date",
+    "endDate": "data-oh-calendar-end-date",
+    "startOfWeek": "data-oh-calendar-start-of-week"
+  }
+}

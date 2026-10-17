@@ -1,0 +1,19 @@
+{
+  "element": "oh-tabs",
+  "display": "contents",
+  "selectors": {
+    "trigger": "[data-oh-tabs=\"trigger\"]",
+    "content": "[data-oh-tabs=\"content\"]"
+  },
+  "attributes": {
+    "value": "data-oh-tabs-value",
+    "state": "data-oh-tabs-state"
+  },
+  "states": {
+    "active": "active",
+    "inactive": "inactive"
+  },
+  "classes": {
+    "hidden": "hidden"
+  }
+}

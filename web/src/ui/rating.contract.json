@@ -1,0 +1,19 @@
+{
+  "element": "oh-rating",
+  "display": "contents",
+  "selectors": {
+    "root": "[data-oh-rating=\"root\"]",
+    "item": "[data-oh-rating=\"item\"]",
+    "fill": "[data-oh-rating=\"fill\"]",
+    "input": "[data-oh-rating=\"input\"]"
+  },
+  "attributes": {
+    "initialValue": "data-oh-rating-initial-value",
+    "precision": "data-oh-rating-precision",
+    "readonly": "data-oh-rating-readonly",
+    "name": "data-oh-rating-name",
+    "onlyInteger": "data-oh-rating-only-integer",
+    "itemValue": "data-oh-rating-value"
+  },
+  "enabled": "true"
+}

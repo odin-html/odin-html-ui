@@ -1,0 +1,26 @@
+{
+  "element": "oh-timepicker",
+  "display": "contents",
+  "selectors": {
+    "trigger": "[data-oh-timepicker-trigger]",
+    "display": "[data-oh-timepicker-display]",
+    "hiddenInput": "[data-oh-timepicker-hidden-input]",
+    "popup": "[data-oh-timepicker-popup]",
+    "hourList": "[data-oh-timepicker-hour-list]",
+    "minuteList": "[data-oh-timepicker-minute-list]",
+    "done": "[data-oh-timepicker-done]",
+    "popoverContent": "[popover]"
+  },
+  "attributes": {
+    "use12Hours": "data-oh-timepicker-use12hours",
+    "step": "data-oh-timepicker-step",
+    "minTime": "data-oh-timepicker-min-time",
+    "maxTime": "data-oh-timepicker-max-time",
+    "placeholder": "data-oh-timepicker-placeholder",
+    "hour": "data-oh-timepicker-hour",
+    "minute": "data-oh-timepicker-minute",
+    "period": "data-oh-timepicker-period",
+    "selected": "data-oh-timepicker-selected",
+    "active": "data-oh-timepicker-active"
+  }
+}

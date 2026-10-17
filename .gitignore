@@ -1,0 +1,68 @@
+build/
+
+# The web half's dependencies and build output. web/.gitignore says the same
+# from inside web/; these are stated here too so the repository root is the one
+# place that says what is never committed.
+web/node_modules/
+web/dist/
+
+# Test binaries `odin test` leaves at the repository root.
+#
+# `make test` writes them under build/test/, and a clean run deletes its own
+# binary anyway; an *interrupted* run by hand (`odin test ui/foo`) does not --
+# and piping its output into `head`, or anything else that exits early,
+# interrupts it. The name is the package's last path component.
+#
+# Every entry is anchored with a leading slash so it only ever matches a file at
+# the root, never the component directory `ui/<name>/` of the same name. Written
+# out rather than globbed: a pattern broad enough to catch them would also hide
+# the next extensionless file someone adds at the root. A new component adds its
+# line here.
+/accordion
+/alert
+/aspectratio
+/avatar
+/badge
+/breadcrumb
+/button
+/calendar
+/card
+/carousel
+/checkbox
+/collapsible
+/copybutton
+/datepicker
+/dialog
+/dropdown
+/form
+/hovercard
+/icon
+/input
+/inputotp
+/label
+/layout
+/pagination
+/popover
+/progress
+/radio
+/rating
+/selectbox
+/separator
+/sheet
+/sidebar
+/skeleton
+/slider
+/table
+/tabs
+/tagsinput
+/textarea
+/timepicker
+/toast
+/toggle
+/tooltip
+
+# Metis Ralph loop state -- per-session runtime state, not source
+.claude/
+
+# macOS
+.DS_Store

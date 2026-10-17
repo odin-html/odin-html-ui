@@ -1,0 +1,13 @@
+{
+  "element": "oh-inputotp",
+  "display": "contents",
+  "selectors": {
+    "root": "[data-oh-inputotp]",
+    "slot": "[data-oh-inputotp-slot]",
+    "valueTarget": "[data-oh-inputotp-value-target]"
+  },
+  "attributes": {
+    "value": "data-oh-inputotp-value",
+    "index": "data-oh-inputotp-index"
+  }
+}

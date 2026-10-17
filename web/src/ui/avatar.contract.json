@@ -1,0 +1,8 @@
+{
+  "element": "oh-avatar",
+  "display": "contents",
+  "selectors": {
+    "image": "[data-oh-avatar-image]",
+    "fallback": "[data-oh-avatar-fallback]"
+  }
+}

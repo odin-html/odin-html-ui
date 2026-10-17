@@ -1,0 +1,30 @@
+{
+  "element": "oh-carousel",
+  "display": "contents",
+  "selectors": {
+    "root": "[data-oh-carousel]",
+    "track": "[data-oh-carousel-track]",
+    "item": "[data-oh-carousel-item]",
+    "previous": "[data-oh-carousel-prev]",
+    "next": "[data-oh-carousel-next]",
+    "indicator": "[data-oh-carousel-indicator]"
+  },
+  "attributes": {
+    "current": "data-oh-carousel-current",
+    "autoplay": "data-oh-carousel-autoplay",
+    "interval": "data-oh-carousel-interval",
+    "loop": "data-oh-carousel-loop",
+    "indicatorIndex": "data-oh-carousel-indicator",
+    "indicatorActive": "data-oh-carousel-active"
+  },
+  "flags": {
+    "on": "true",
+    "off": "false"
+  },
+  "classes": {
+    "indicatorActive": "bg-primary",
+    "indicatorInactive": "bg-foreground/30"
+  },
+  "initialIndex": "0",
+  "defaultInterval": "5000"
+}

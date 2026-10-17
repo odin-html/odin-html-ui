@@ -1,0 +1,11 @@
+{
+  "element": "oh-checkbox",
+  "display": "contents",
+  "selectors": {
+    "box": "[data-oh-checkbox-group]"
+  },
+  "attributes": {
+    "group": "data-oh-checkbox-group",
+    "parent": "data-oh-checkbox-parent"
+  }
+}

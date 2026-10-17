@@ -1,0 +1,12 @@
+{
+  "element": "oh-input",
+  "display": "contents",
+  "selectors": {
+    "iconOpen": ".icon-open",
+    "iconClosed": ".icon-closed"
+  },
+  "attributes": {
+    "toggle": "data-oh-toggle-password"
+  },
+  "hidden": "hidden"
+}

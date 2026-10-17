@@ -1,0 +1,13 @@
+{
+  "element": "oh-toast",
+  "display": "contents",
+  "selectors": {
+    "root": "[data-oh-toast=\"root\"]",
+    "indicator": "[data-oh-toast=\"indicator\"]",
+    "dismiss": "[data-oh-toast=\"dismiss\"]"
+  },
+  "attributes": {
+    "duration": "data-oh-toast-duration"
+  },
+  "defaultDuration": "3000"
+}

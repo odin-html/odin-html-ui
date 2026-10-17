@@ -1,0 +1,14 @@
+{
+  "element": "oh-popover",
+  "display": "contents",
+  "selectors": {
+    "trigger": "[data-oh-popover-trigger]",
+    "content": "[data-oh-popover-content]"
+  },
+  "attributes": {
+    "type": "data-oh-popover-type"
+  },
+  "values": {
+    "typeClick": "click"
+  }
+}

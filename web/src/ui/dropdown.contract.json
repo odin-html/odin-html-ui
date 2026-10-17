@@ -1,0 +1,12 @@
+{
+  "element": "oh-dropdown",
+  "display": "contents",
+  "selectors": {
+    "item": "[data-oh-dropdown-item]",
+    "popoverContent": "[popover]"
+  },
+  "attributes": {
+    "submenuTrigger": "data-oh-dropdown-submenu-trigger",
+    "preventClose": "data-oh-dropdown-prevent-close"
+  }
+}

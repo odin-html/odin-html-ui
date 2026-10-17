@@ -1,0 +1,24 @@
+{
+  "element": "oh-selectbox",
+  "display": "contents",
+  "selectors": {
+    "trigger": "[data-oh-selectbox-trigger]",
+    "hiddenInput": "[data-oh-selectbox-hidden-input]",
+    "display": "[data-oh-selectbox-display]",
+    "content": "[data-oh-selectbox-content]",
+    "item": "[data-oh-selectbox-item]",
+    "itemText": "[data-oh-selectbox-item-text]",
+    "search": "[data-oh-selectbox-search]",
+    "clear": "[data-oh-selectbox-clear-trigger]",
+    "chevron": "[data-oh-selectbox-chevron]"
+  },
+  "attributes": {
+    "multiple": "data-oh-selectbox-multiple",
+    "showPills": "data-oh-selectbox-show-pills",
+    "countText": "data-oh-selectbox-selected-count-text",
+    "value": "data-oh-selectbox-value",
+    "selected": "data-oh-selectbox-selected",
+    "disabled": "data-oh-selectbox-disabled",
+    "placeholder": "data-oh-selectbox-placeholder"
+  }
+}

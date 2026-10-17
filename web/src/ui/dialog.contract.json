@@ -1,0 +1,16 @@
+{
+  "element": "oh-dialog",
+  "display": "contents",
+  "selectors": {
+    "dialog": "dialog",
+    "trigger": "[data-oh-dialog-trigger]",
+    "close": "[data-oh-dialog-close]"
+  },
+  "attributes": {
+    "disableClickAway": "data-oh-dialog-disable-click-away",
+    "disableEsc": "data-oh-dialog-disable-esc",
+    "initialOpen": "data-oh-dialog-initial-open",
+    "showModal": "data-oh-dialog-show-modal",
+    "target": "data-oh-dialog-target"
+  }
+}
